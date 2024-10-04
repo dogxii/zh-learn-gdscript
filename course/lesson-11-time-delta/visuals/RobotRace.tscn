@@ -1,0 +1,80 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://course/lesson-11-time-delta/visuals/RunningRobot.tscn" type="PackedScene" id=1]
+[ext_resource path="res://course/lesson-11-time-delta/visuals/RobotRace.gd" type="Script" id=2]
+
+[sub_resource type="GDScript" id=1]
+script/source = "extends Node2D
+
+var speed = 200.0
+
+
+func move(delta):
+	position.x += speed * delta
+
+
+onready var start_position = position
+
+func reset():
+	position = start_position
+"
+
+[sub_resource type="GDScript" id=3]
+script/source = "extends Node2D
+
+var distance = 200.0 / 120.0
+
+func move(delta):
+	position.x += distance
+
+
+onready var start_position = position
+
+func reset():
+	position = start_position
+"
+
+[node name="RobotRace" type="Node2D"]
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_vertical_guides_": [ -151.0 ]
+}
+
+[node name="Robots" type="Node2D" parent="."]
+position = Vector2( 0, -87 )
+
+[node name="RunningRobotFrameDelta" parent="Robots" instance=ExtResource( 1 )]
+position = Vector2( -67, 70 )
+script = SubResource( 1 )
+
+[node name="RunningRobotFrame" parent="Robots" instance=ExtResource( 1 )]
+position = Vector2( -67, 220 )
+script = SubResource( 3 )
+
+[node name="Label" type="Label" parent="Robots"]
+margin_left = -292.0
+margin_right = -152.0
+margin_bottom = 14.0
+rect_min_size = Vector2( 140, 0 )
+text = "With delta"
+align = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label2" type="Label" parent="Robots"]
+margin_left = -308.0
+margin_top = 150.0
+margin_right = -152.0
+margin_bottom = 164.0
+rect_min_size = Vector2( 140, 0 )
+text = "Constant distance"
+align = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Timer" type="Timer" parent="."]
+one_shot = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]

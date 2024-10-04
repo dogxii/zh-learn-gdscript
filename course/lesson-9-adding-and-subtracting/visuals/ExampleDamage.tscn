@@ -1,0 +1,71 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://ui/components/RunnableCodeExample.tscn" type="PackedScene" id=2]
+[ext_resource path="res://course/common/Robot.tscn" type="PackedScene" id=3]
+[ext_resource path="res://course/common/CustomHealthBar.tscn" type="PackedScene" id=4]
+
+[sub_resource type="GDScript" id=2]
+script/source = "extends Node2D
+
+var initial_health := 75
+var health := initial_health
+
+onready var _animation_tree := find_node(\"AnimationTree\")
+onready var _health_bar := find_node(\"CustomHealthBar\")
+
+
+func _ready() -> void:
+	yield(get_tree(), \"idle_frame\")
+	_health_bar.set_health(health)
+
+
+func run() -> void:
+	health -= 25
+	_health_bar.set_health(health)
+	_animation_tree.travel(\"damage\")
+
+
+func reset() -> void:
+	_health_bar.set_health(initial_health)
+	health = initial_health
+"
+
+[node name="ExampleDamage" type="PanelContainer"]
+margin_right = 1047.0
+margin_bottom = 298.0
+rect_min_size = Vector2( 0, 340 )
+size_flags_horizontal = 3
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="RunnableCodeExample" parent="." instance=ExtResource( 2 )]
+margin_left = 7.0
+margin_top = 7.0
+margin_right = 1040.0
+margin_bottom = 333.0
+gdscript_code = "func take_damage(amount):
+	health -= amount"
+
+[node name="Frame" parent="RunnableCodeExample" index="0"]
+margin_right = 514.0
+margin_bottom = 326.0
+
+[node name="RunButton" parent="RunnableCodeExample/Frame/HBoxContainer" index="1"]
+margin_right = 262.0
+text = "take_damage(25)"
+
+[node name="GDScriptCode" parent="RunnableCodeExample" index="1"]
+visible = true
+margin_left = 518.0
+margin_right = 1033.0
+margin_bottom = 326.0
+text = "func take_damage(amount):
+	health -= amount"
+
+[node name="Robot" parent="RunnableCodeExample" instance=ExtResource( 3 )]
+script = SubResource( 2 )
+
+[node name="CustomHealthBar" parent="RunnableCodeExample/Robot" instance=ExtResource( 4 )]
+
+[editable path="RunnableCodeExample"]

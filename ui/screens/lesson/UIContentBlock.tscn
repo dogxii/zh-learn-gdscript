@@ -1,0 +1,83 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://ui/theme/fonts/font_lesson_heading.tres" type="DynamicFont" id=1]
+[ext_resource path="res://ui/theme/fonts/font_text.tres" type="DynamicFont" id=2]
+[ext_resource path="res://ui/theme/hseparator_lesson_content.tres" type="StyleBox" id=3]
+[ext_resource path="res://ui/theme/gdscript_app_theme.tres" type="Theme" id=4]
+[ext_resource path="res://ui/screens/lesson/UIContentBlock.gd" type="Script" id=5]
+
+[node name="UIContentBlock" type="MarginContainer"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 2
+theme = ExtResource( 4 )
+custom_constants/margin_right = 0
+custom_constants/margin_top = 0
+custom_constants/margin_left = 0
+custom_constants/margin_bottom = 0
+script = ExtResource( 5 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Panel" type="PanelContainer" parent="."]
+margin_right = 1920.0
+margin_bottom = 1080.0
+mouse_filter = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="Panel"]
+margin_right = 1920.0
+margin_bottom = 1080.0
+mouse_filter = 2
+size_flags_horizontal = 3
+custom_constants/margin_right = 0
+custom_constants/margin_top = 0
+custom_constants/margin_left = 0
+custom_constants/margin_bottom = 10
+
+[node name="Layout" type="VBoxContainer" parent="Panel/MarginContainer"]
+margin_right = 1920.0
+margin_bottom = 1070.0
+mouse_filter = 2
+
+[node name="ContentHeader" type="Label" parent="Panel/MarginContainer/Layout"]
+margin_right = 1920.0
+margin_bottom = 44.0
+custom_fonts/font = ExtResource( 1 )
+text = "Placeholder heading"
+autowrap = true
+
+[node name="ContentLayout" type="HBoxContainer" parent="Panel/MarginContainer/Layout"]
+margin_top = 60.0
+margin_right = 1920.0
+margin_bottom = 89.0
+mouse_filter = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextContent" type="RichTextLabel" parent="Panel/MarginContainer/Layout/ContentLayout" groups=["rich_text_label"]]
+margin_right = 1920.0
+margin_bottom = 29.0
+rect_min_size = Vector2( 320, 0 )
+mouse_filter = 1
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_fonts/normal_font = ExtResource( 2 )
+bbcode_enabled = true
+bbcode_text = "Placeholder text"
+text = "Placeholder text"
+fit_content_height = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ContentSeparator" type="HSeparator" parent="Panel/MarginContainer/Layout"]
+margin_left = 860.0
+margin_top = 105.0
+margin_right = 1060.0
+margin_bottom = 113.0
+rect_min_size = Vector2( 200, 0 )
+mouse_filter = 2
+size_flags_horizontal = 4
+custom_styles/separator = ExtResource( 3 )
