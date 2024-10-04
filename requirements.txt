@@ -1,3 +1,0 @@
-babel
-babel-godot
-datargs
