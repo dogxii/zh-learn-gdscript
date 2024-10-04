@@ -1,66 +1,28 @@
 # Learn GDScript From Zero
 
-Learn GDScript From Zero is a free and open-source app for absolute beginners to learn to program with Godot's GDScript language.
+Learn GDScript From Zero 是一款免费的开源应用程序，供绝对初学者学习使用 Godot 的 GDScript 语言进行编程。
 
-It's a beginner-friendly programming course.
+这是一门适合初学者的编程课程。
 
-This app is the free part of a larger paid course to become a game developer: [Learn to Code From Zero, with Godot](https://gdquest.mavenseed.com/courses/learn-to-code-from-zero-with-godot).
+这个系列与Godot 4兼容。
 
-The series is compatible with Godot 4.
+这个系列翻译自于 [原项目](https://github.com/GDQuest/learn-gdscript)。
 
-## How to run the app
+## 如何运行应用程序
 
-You can run the app online here: https://gdquest.github.io/learn-gdscript/
+您可以在此处在线运行该应用程序: https://gdquest.github.io/learn-gdscript/
 
-Also, you can download the app for Windows, macOS, and Linux on Itch.io: https://gdquest.itch.io/learn-godot-gdscript
+此外，您还可以在 Itch.io 上下载适用于 Windows、macOS 和 Linux 的应用程序: https://gdquest.itch.io/learn-godot-gdscript(官方无中文)
 
-The desktop version can offer better performance and crisper text than the web version.
+桌面版本可以提供比 Web 版本更好的性能和更清晰的文本。
 
-## Feedback, requests, and discussions
+## 反馈、请求和讨论
 
-We value feedback and bug reports. We will also consider feature requests, especially if they fit our vision and we feel they benefit programming beginners.
+**反馈、请求和讨论** 请前往 [Issues](issues) 栏.
 
-When participating in discussions, please respect our [Kind Communication Guidelines](https://www.gdquest.com/docs/guidelines/best-practices/communication/).
+### 其他
 
-In the [Discussions](https://github.com/GDQuest/learn-gdscript/discussions) tab, you can suggest and upvote ideas for new features, or **ask other community members for help**.
-
-**To report bugs, typos,** and discuss existing tasks, please head to the [Issues](issues) tab instead.
-
-## How to contribute
-
-Contributions are welcome if you feel like giving a hand.
-
-To contribute, you need to follow a couple of guidelines.
-
-First, we ultimately decide on the app's design and features or changes. Before you make a change, please ensure there's an existing [Issues](https://github.com/GDQuest/learn-gdscript/issues) for it, and please let us know you're working on it. 
-
-Here's our GDScript code style guide: [GDQuest GDScript style guide](https://www.gdquest.com/docs/guidelines/best-practices/godot-gdscript/).
-
-Please always start pull request titles and commit messages with one of the following prefixes:
-
-- `feat:` for new features.
-- `improvement:` for an improvement to an existing feature.
-- `fix:` for a bug fix.
-- `docs:` for changes to the project's documentation.
-- `build:` for anything related to GitHub actions.
-- `content:` for changes to lesson and helper text, be it correcting typos, adding new paragraphs, and more.
-
-### How we work
-
-We may directly edit your code to merge it faster when reviewing your changes. This is something we do in our team, too, for efficiency. We may also request changes.
-
-Finally, if some contribution doesn't work for us, we _may_ close the pull request. 
-
-This happens primarily in two cases:
-
-- The changes don't answer an issue we created or vetted.
-- The pull request's author didn't make the requested changes for over a month.
-
-### Importing the app in Godot to contribute
-
-**Warning: this is not the recommended way to run the app for learning. Use this only to study the code and contribute.**
-
-You can also run the project straight in Godot by cloning the repository and importing the folder into the engine.
+更多内容请到原项目了解，本项目仅做翻译汉化。
 
 We only recommend importing the app in Godot to study its source code or [contribute](#how-to-contribute). You will need **Godot 3.5 LTS** or a more recent stable version of Godot 3. Otherwise, it won't run.
 
