@@ -1,5 +1,5 @@
 > [!NOTE]
-> 官方在2024.12.12中的commit中已添加汉化，但并未打包，所以2025.2.13给官方仓库进行了打包
+> 官方在2024.12.12中的commit中已添加汉化，但并未打包，所以2025.2.13给官方仓库进行了打包，见[Release](https://github.com/dogxii/zh-learn-gdscript/releases)
 
 # Learn GDScript From Zero
 
