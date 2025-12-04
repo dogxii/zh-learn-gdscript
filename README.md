@@ -15,9 +15,11 @@ Learn GDScript From Zero 是一款免费的开源应用程序，供绝对初学�
 
 国内网页版：[godot.dogxi.me](https://godot.dogxi.me)
 
-（因为太耗费流量，关停了= =。sorry，还是在 Release 下载吧 或者 使用 Github 部署的，启动有些卡）
+（因为太耗费流量，关停了= =。sorry，还是在 Release 下载吧 或者 使用 Github 部署的，国内直连有些卡）
 
 Github Page: https://dogxii.github.io/zh-learn-gdscript
+
+（可以在设置里设置中文）
 
 ## 仓库更新记录
 
