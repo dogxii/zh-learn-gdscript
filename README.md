@@ -1,5 +1,8 @@
+> [!WARNING]
+> 2026.7.12: 该项目已很久未更新，如需汉化版可使用官方网页版：https://gdquest.github.io/learn-gdscript/
+
 > [!NOTE]
-> 官方在2024.12.12中的commit中已添加汉化，但并未打包，所以2025.2.13给官方仓库进行了打包，见[Release](https://github.com/dogxii/zh-learn-gdscript/releases)
+> 2025.2.13: 官方在 2024.12.12 中的 commit 中已添加汉化，但并未打包，所以给官方仓库进行了打包，见 [Release](https://github.com/dogxii/zh-learn-gdscript/releases)
 
 # Learn GDScript From Zero
 
@@ -7,7 +10,7 @@ Learn GDScript From Zero 是一款免费的开源应用程序，供绝对初学�
 
 这是一门适合初学者的编程课程。
 
-这个系列与Godot 4兼容。
+这个系列与 Godot 4 兼容。
 
 这个系列翻译自于 [原项目](https://github.com/GDQuest/learn-gdscript)。
 
